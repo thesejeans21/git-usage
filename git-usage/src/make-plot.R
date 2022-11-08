@@ -14,6 +14,8 @@ g <- ggplot(
     y = "Percentage who used git") +
   ylim(c(0,100)) +
   theme_bw()
+ggsave(filename = "git-usage.png", plot = g,
+       height = 7.4, width = 10.5 , units = "cm")
 
 sink(file = "out/package-versions.txt")
 sessionInfo()
